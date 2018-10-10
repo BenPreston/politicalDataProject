@@ -232,7 +232,7 @@ function calculateVotingRecordAndAttendance() {
 
 function appendLoyaltyData() {
 
-    if (location.pathname == ("/house_loyalty_stats.html")) {
+    if (location.pathname.includes("/house_loyalty_stats.html")) {
 
         var demLoyaltyPercentage = document.getElementById('demPercentage');
 
@@ -258,7 +258,7 @@ function appendLoyaltyData() {
 
     // APPEND SENATE LOYALTY
 
-    if (location.pathname == "/senate_loyalty_stats.html") {
+    if (location.pathname.includes("/senate_loyalty_stats.html")) {
 
         var demLoyaltyPercentage = document.getElementById('demPercentage');
 
