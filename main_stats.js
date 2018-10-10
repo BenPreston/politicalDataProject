@@ -231,7 +231,7 @@ function calculateVotingRecordAndAttendance() {
 // Then I want to append the vote percentages for voting with party to the two loyalty apges
 
 function appendLoyaltyData() {
-
+console.log(location.pathname.includes("/house_loyalty_stats.html"))
     if (location.pathname.includes("/house_loyalty_stats.html")) {
 
         var demLoyaltyPercentage = document.getElementById('demPercentage');
@@ -396,12 +396,12 @@ function appendLoyalty(tableToAppend, statArrayToUse) {
 
 function appendAllLoyaltyTables() {
 
-    if (location.pathname == "/senate_loyalty_stats.html") {
+    if (location.pathname.includes( "/senate_loyalty_stats.html")) {
         appendLoyalty(document.getElementById("senateLoyaltyTable"), statistics.mostLoyalList);
 
         appendLoyalty(document.getElementById("senateUnloyaltyTable"), statistics.leastLoyalList);
     }
-    if (location.pathname == "/house_loyalty_stats.html") {
+    if (location.pathname.includes( "/house_loyalty_stats.html")) {
         appendLoyalty(document.getElementById("houseLoyaltyTable"), statistics.mostLoyalList);
 
         appendLoyalty(document.getElementById("houseUnLoyaltyTable"), statistics.leastLoyalList);
